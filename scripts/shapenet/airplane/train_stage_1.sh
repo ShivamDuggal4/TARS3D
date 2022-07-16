@@ -1,0 +1,1 @@
+python3 train.py --model=reconstruction --yaml=configs/shapenet/reconstruction_stage_one.yaml --name=airplane --data.shapenet.cat=plane --loss_weight.shape_silh=1

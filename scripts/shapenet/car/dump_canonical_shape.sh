@@ -1,0 +1,1 @@
+python3 evaluate.py --model=dump_canonical_shape --yaml=configs/shapenet/reconstruction_stage_one.yaml --name=car --data.shapenet.cat=car --load=output/shapenet/reconstruction_stage_one/car/checkpoint/ep56.ckpt --tb= --visdom= --eval.vox_res=128 --eval_split=train

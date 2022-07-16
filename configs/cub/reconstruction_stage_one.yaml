@@ -1,0 +1,56 @@
+_parent_: configs/cub/base.yaml
+
+group: reconstruction_stage_one
+name: cub
+load: output/cub/pretrain_sdf_generator/cub/latest.ckpt
+load_deformnet:
+mean_latent:
+is_stage_two_active:
+eval_split: # train or val
+
+arch:
+    enc_network: resnet18
+    enc_pretrained: true
+
+data:
+    num_workers: 4
+    augment:
+        crop_scale: 0.2
+        brightness: 0.2
+        contrast: 0.2
+        saturation: 0.2
+        hue: 0.5
+        rotate:
+    bgcolor: 1
+    cub:
+        set: imagenet
+        cat: cub
+
+impl:
+    sdf_samples: 5
+    depth_range: [1.2,3.8]
+    importance: true
+    srn_steps: 20
+    rand_sample: 2048 #1024
+    init_depth: 1.2
+    bisection_steps: 10
+
+loss_weight:
+    render: 10
+    shape_silh: 3
+    ray_intsc: 1
+    ray_free: 0.1
+    eikonal: 1 # eikonal 0.1 doesn't work
+    pts_deformations: 0
+
+optim:
+    lr: 1.e-4
+    
+max_epoch: 200
+
+freq:
+    scalar: 100 # iterations
+    vis: 200 # iterations
+    eval: 5 # epochs
+    ckpt: 10 # epochs
+    ckpt_latest: 2000 # iterations

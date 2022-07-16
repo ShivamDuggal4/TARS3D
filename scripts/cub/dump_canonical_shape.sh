@@ -1,0 +1,1 @@
+python3 evaluate.py --model=dump_canonical_shape --yaml=configs/cub/reconstruction_stage_one.yaml --load=output/cub/reconstruction_stage_one/cub/checkpoint/ep160.ckpt --tb= --visdom=  --eval_split=train

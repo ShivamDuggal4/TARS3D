@@ -1,0 +1,47 @@
+_parent_: configs/base.yaml
+
+latent_dim: 512
+pts_feat_dim: 4
+pts_feat_pos_enc_dim: 3
+evaluation:
+
+arch:
+    sdf_generator:
+        layers_hyper: [null,512,512,512,512,512,null]
+        layers_impl: [null,128,128,128,128]
+        layers_rgb: [null,3]
+        layers_level: [null,1]
+        interm_coord: true
+        lstm_dim: 32
+    
+    deformnet:
+        layers_hyper: [null,512,512,512,512,512,null]
+        layers_impl: [null,128,128,128,128]
+        layers_pts_deformations: [null,3]
+        layers_pts_feat: [null,4]
+        layers_rgb: [null,3]
+        interm_coord: true
+    
+    renderer:
+        lstm_dim: 32
+
+camera:
+    model: perspective
+    dist: 2.732
+
+data:
+    dataset: shapenet
+
+eval:
+    vox_res: 64
+    num_points: 100000
+    range: [-0.6,0.6]
+    icp: false
+
+impl:
+    posenc_L: 5
+    sdf_range: [-1,1]  
+    
+image_size: [64, 64]
+
+

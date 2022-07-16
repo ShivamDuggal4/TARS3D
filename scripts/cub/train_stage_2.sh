@@ -1,0 +1,3 @@
+# Change --load parameter to use some other trained model. Refer to --name parameter to  use for other name for the job.
+# training metdata (models, configs, checkpoints) will be dumped at: `output/cub/reconstruction_stage_two/cub/`
+python3 train.py --model=reconstruction --yaml=configs/cub/reconstruction_stage_two.yaml --load=output/cub/reconstruction_stage_one/cub/checkpoint/ep160.ckpt --mean_latent=output/cub/reconstruction_stage_one/cub/dump/mean_shape_latent.npy --load_deformnet=output/cub/pretrain_deformnet/cub/latest.ckpt

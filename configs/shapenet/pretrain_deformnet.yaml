@@ -1,0 +1,31 @@
+_parent_: configs/shapenet/base.yaml
+
+group: pretrain_deformnet
+name: shapenet_deformnet
+
+latent_std: 1.
+load: 
+load_deformnet:
+mean_latent:
+
+impl:
+    sdf_range: [-1,1]
+    pretrain_radius: 0.5
+
+loss_weight:
+    sphere: 1
+    sphere_normal: 1
+
+optim:
+    lr: 1.e-4
+
+max_iter: 4000
+batch_size: 1
+visdom:
+    num_samples: 1
+
+freq:
+    scalar: 100 # iterations
+    vis: 100 # iterations
+    eval: 1000 # epochs
+    ckpt: 5 # epochs

@@ -1,0 +1,1 @@
+python3 train.py --model=pretrain_deformnet --yaml=configs/shapenet/pretrain_deformnet.yaml --name=car --mean_latent=output/shapenet/reconstruction_stage_one/car/dump/mean_shape_latent.npy --load=output/shapenet/reconstruction_stage_one/car/checkpoint/ep56.ckpt

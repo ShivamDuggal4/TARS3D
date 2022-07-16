@@ -1,0 +1,2 @@
+# output/cub/reconstruction_stage_two/cub/checkpoint/ep300.ckpt
+python3 evaluate.py --model=reconstruction --yaml=configs/cub/reconstruction_stage_two.yaml --name=cub --data.cub.cat=cub --load=pretrained_models/cub.ckpt --tb= --visdom= --eval.vox_res=128 --eval.icp --group=reconstruction_stage_two --eval_split=val --evaluation --batch_size=1

@@ -1,0 +1,28 @@
+_parent_: configs/pascal3d/base.yaml
+
+group: pretrain_sdf_generator
+name: pascal3d
+
+latent_std: 1.
+batch_size: 1
+is_stage_two_active:
+
+impl:
+    pretrain_radius: 1.
+
+loss_weight:
+    sphere: 1
+
+optim:
+    lr: 1.e-4
+
+max_iter: 4000
+
+freq:
+    scalar: 100 # iterations
+    vis: 100 # iterations
+    eval: 1000 # epochs
+    ckpt: 5 # epochs
+
+visdom:
+    num_samples: 1

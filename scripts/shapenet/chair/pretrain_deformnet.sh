@@ -1,0 +1,1 @@
+python3 train.py --model=pretrain_deformnet --yaml=configs/shapenet/pretrain_deformnet.yaml --name=chair --mean_latent=output/shapenet/reconstruction_stage_one/chair/dump/mean_shape_latent.npy --load=output/shapenet/reconstruction_stage_one/chair/checkpoint/ep58.ckpt

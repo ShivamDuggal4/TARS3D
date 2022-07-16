@@ -1,0 +1,2 @@
+# output/shapenet/reconstruction_stage_two/airplane_trial_2/checkpoint/ep26.ckpt
+python3 evaluate.py --model=reconstruction --yaml=configs/shapenet/reconstruction_stage_two.yaml --name=airplane --data.shapenet.cat=plane --load=pretrained_models/shapenet_airplane.ckpt --tb= --visdom= --eval.vox_res=128  --group=reconstruction_stage_two --eval_split=test --evaluation --batch_size=1

@@ -1,0 +1,2 @@
+# output/shapenet/reconstruction_stage_two/car/checkpoint/ep40.ckpt
+python3 evaluate.py --model=reconstruction --yaml=configs/shapenet/reconstruction_stage_two.yaml --name=car --data.shapenet.cat=car --load=pretrained_models/shapenet_car.ckpt --tb= --visdom= --eval.vox_res=128  --group=reconstruction_stage_two --eval_split=test --evaluation --batch_size=1

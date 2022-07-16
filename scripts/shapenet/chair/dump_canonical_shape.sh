@@ -1,0 +1,1 @@
+python3 evaluate.py --model=dump_canonical_shape --yaml=configs/shapenet/reconstruction_stage_one.yaml --name=chair --data.shapenet.cat=chair --load=output/shapenet/reconstruction_stage_one/chair/checkpoint/ep58.ckpt --tb= --visdom= --eval.vox_res=128  --eval_split=train

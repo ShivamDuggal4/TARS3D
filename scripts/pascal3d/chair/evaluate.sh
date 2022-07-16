@@ -1,0 +1,2 @@
+# output/pascal3d/reconstruction_stage_two/chair_trial_2/checkpoint/ep1920.ckpt
+python3 evaluate.py --model=reconstruction --yaml=configs/pascal3d/reconstruction_stage_two.yaml --name=chair --data.pascal3d.cat=chair --load=pretrained_models/pascal3d_chair.ckpt --tb= --visdom= --eval.vox_res=128 --eval.icp --group=reconstruction_stage_two --eval_split=val --evaluation --batch_size=1

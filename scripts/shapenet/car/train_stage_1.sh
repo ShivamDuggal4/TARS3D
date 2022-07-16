@@ -1,0 +1,1 @@
+python3 train.py --model=reconstruction --yaml=configs/shapenet/reconstruction_stage_one.yaml --name=car --data.shapenet.cat=car

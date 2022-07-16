@@ -1,0 +1,1 @@
+python3 evaluate.py --model=dump_canonical_shape --yaml=configs/shapenet/reconstruction_stage_one.yaml --name=airplane --data.shapenet.cat=plane --load=output/shapenet/reconstruction_stage_one/airplane/checkpoint/ep40.ckpt --tb= --visdom= --eval.vox_res=128  --group=reconstruction_stage_one --eval_split=train

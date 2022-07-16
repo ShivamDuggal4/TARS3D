@@ -1,0 +1,1 @@
+python3 train.py --model=pretrain_sdf_generator --yaml=configs/cub/pretrain_sdf_generator.yaml

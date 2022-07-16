@@ -1,0 +1,2 @@
+# output/shapenet/reconstruction_stage_two/chair/checkpoint/ep40.ckpt
+python3 evaluate.py --model=reconstruction --yaml=configs/shapenet/reconstruction_stage_two.yaml --name=chair --data.shapenet.cat=chair --load=pretrained_models/shapenet_chair.ckpt --tb= --visdom= --eval.vox_res=128  --group=reconstruction_stage_two --eval_split=test --evaluation --batch_size=1

@@ -1,0 +1,32 @@
+name: tars-env
+channels:
+  - pytorch 
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pip
+  - numpy
+  - scipy
+  - tqdm
+  - termcolor
+  - easydict
+  - imageio
+  - vigra
+  - pytorch
+  - torchvision==0.2.2
+  - tensorboard
+  - visdom
+  - matplotlib
+  - trimesh
+  - scikit-image==0.18.2
+  - scikit-learn
+  - pyyaml
+  - jupyter
+  - jsonpatch
+  - pip:
+    - pymcubes
+    - plyfile
+    - open3d
+    - pyvista
+    - pillow==8.3.1

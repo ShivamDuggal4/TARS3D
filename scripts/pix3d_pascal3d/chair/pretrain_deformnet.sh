@@ -1,0 +1,1 @@
+python3 train.py --model=pretrain_deformnet --yaml=configs/pix3d_pascal3d/pretrain_deformnet.yaml --name=chair --mean_latent=output/pix3d_pascal3d/reconstruction_stage_one/chair/dump/mean_shape_latent.npy --load=output/pix3d_pascal3d/reconstruction_stage_one/chair/checkpoint/ep300.ckpt

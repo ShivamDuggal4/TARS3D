@@ -1,0 +1,1 @@
+python3 train.py --model=pretrain_deformnet --yaml=configs/cub/pretrain_deformnet.yaml --load=output/cub/reconstruction_stage_one/cub/checkpoint/ep160.ckpt --mean_latent=output/cub/reconstruction_stage_one/cub/dump/mean_shape_latent.npy

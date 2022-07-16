@@ -1,0 +1,2 @@
+# Replace --load parameter with you own trained model
+python3 train.py --model=pretrain_deformnet --yaml=configs/pascal3d/pretrain_deformnet.yaml --name=chair --mean_latent=output/pascal3d/reconstruction_stage_one/chair/dump/mean_shape_latent.npy --load=output/pascal3d/reconstruction_stage_one/chair/checkpoint/ep900.ckpt

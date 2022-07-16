@@ -1,0 +1,33 @@
+_parent_: configs/cub/base.yaml
+
+group: pretrain_deformnet
+name: cub
+
+latent_std: 1.
+load: output/cub/reconstruction_stage_one/cub/checkpoint/ep160.ckpt
+load_deformnet:
+mean_latent: output/cub/reconstruction_stage_one/cub/dump/mean_shape_latent.npy
+batch_size: 1
+is_stage_two_active: true
+
+impl:
+    sdf_range: [-2,2]
+    pretrain_radius: 1.
+
+loss_weight:
+    sphere: 1
+    sphere_normal: 1
+
+optim:
+    lr: 1.e-4
+
+max_iter: 4000
+
+visdom:
+    num_samples: 1
+
+freq:
+    scalar: 100 # iterations
+    vis: 100 # iterations
+    eval: 1000 # epochs
+    ckpt: 5 # epochs

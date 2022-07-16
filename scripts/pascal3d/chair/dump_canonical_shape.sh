@@ -1,0 +1,1 @@
+python3 evaluate.py --model=dump_canonical_shape --yaml=configs/pascal3d/reconstruction_stage_one.yaml --name=chair --data.pascal3d.cat=chair --load=output/pascal3d/reconstruction_stage_one/chair/checkpoint/ep900.ckpt --tb= --visdom= --eval.vox_res=128 --eval.icp --eval_split=train

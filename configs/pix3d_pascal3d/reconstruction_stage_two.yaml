@@ -1,0 +1,64 @@
+_parent_: configs/pix3d_pascal3d/base.yaml
+
+group: reconstruction_stage_two
+name: 
+load: 
+load_deformnet:
+mean_latent: 
+evaluation:
+is_stage_two_active: true
+eval_split: # train or val
+# latent_std: 1.
+# load_global_latent:
+
+arch:
+    enc_network: resnet18
+    enc_pretrained: true
+
+data:
+    dataset: pix3d_pascal3d
+    num_workers: 4
+    augment:
+        crop_scale: 0.2
+        brightness: 0.2
+        contrast: 0.2
+        saturation: 0.2
+        hue: 0.5
+        rotate:
+    bgcolor: 1
+    pix3d_pascal3d:
+        set: imagenet
+        cat:
+    pascal3d:
+        set: imagenet
+        cat:
+
+impl:
+    sdf_samples: 5
+    depth_range: [1.2,3.8]
+    importance: true
+    srn_steps: 20
+    rand_sample: 2048
+    init_depth: 1.2
+    bisection_steps: 10
+
+loss_weight:
+    render: 10
+    shape_silh: 3
+    ray_intsc: 3
+    ray_free: 0.1
+    eikonal: 0.1
+    pts_deformations: 0.1
+    symmetry_loss: 1
+
+optim:
+    lr: 1.e-4
+    
+max_epoch: 6000
+
+freq:
+    scalar: 100 # iterations
+    vis: 200 # iterations
+    eval: 60 # epochs
+    ckpt: 60 # epochs
+    ckpt_latest: 2000 # iterations

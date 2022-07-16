@@ -1,0 +1,2 @@
+# Replace --load parameter with you own trained model
+python3 evaluate.py --model=dump_canonical_shape --yaml=configs/pix3d_pascal3d/reconstruction_stage_one.yaml --name=chair --data.pascal3d.cat=chair --load=output/pix3d_pascal3d/reconstruction_stage_one/chair/checkpoint/ep300.ckpt --tb= --visdom= --eval.vox_res=128 --eval.icp --eval_split=train
